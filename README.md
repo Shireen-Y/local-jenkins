@@ -67,6 +67,8 @@ npm test
   - click settings > webhooks > add webhooks
   - go to ur jenkins and you want to get the url up to the port
     eg . http://localhost:8080/
+  - change the **localhost** to the publicIP address
+    - go to https://whatismyipaddress.com/ to find your publicIP address
   - paste it into payload url on github
   - add **github-webhook** as the end of the URl
   - then add the webhook button
