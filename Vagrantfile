@@ -1,13 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
 Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/xenial64"
-  config.vm.network "private_network", ip: "192.168.10.100"
-  config.hostsupdater.aliases = ["development.local"]
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 
-  # Synced app folder
-  config.vm.synced_folder "app", "/app"
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = false
+    vb.cpus = 2
+    vb.memory = "4096"
+  end
 
-  # Provisioning
-  config.vm.provision "shell", path: "environment/provision.sh"
+  config.vm.provision "shell" do |shell|
+    shell.path = "jenkins.sh"
+  end
 
 end
