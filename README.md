@@ -72,3 +72,5 @@ npm test
   - paste it into payload url on github
   - add **github-webhook** as the end of the URl
   - then add the webhook button
+
+trying to add webhook, so jenkins runs automatically (agent may be needed)
