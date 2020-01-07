@@ -21,7 +21,7 @@ Jenkins is an open source automation server written in java with plugins built f
 ## Configure Jenkins
 1. cd into this **/var/log/jenkins**
 2. **sudo nano jenkins.log**
-3. scroll to the bottom till it gives you a password, copy and past that in to the localhost:8080
+3. scroll to the bottom till it gives you a password, copy and paste that in to the localhost:8080
 4. Continue
 5. Select your preferences & wait for completion
 6. Create a Admin User fill in the credentials and save and Continue
@@ -37,7 +37,7 @@ YOU HAVE JENKINS RUNNING!!!
 1. Go on to your local Jenkins
 2. Create a new job and name the item accordingly and build a freestyle software project.
 3. Fill in the description
-- click github project and past the project url
+- click github project and paste the project url
 
 4. Go to **Source Code Management** and select **git** and enter the https link to the git repo
   - under the credentials click the add key and jenkins in the drop down
@@ -49,13 +49,14 @@ YOU HAVE JENKINS RUNNING!!!
   - in the pub file copy and paste that into a new deploy key and allows write access, then add key.
 5. Paste that into the repo url.
 6. Go to **build triggers** and select **github hook trigger for GITScm polling** this will start the jenkins job on every git push on the master branch
-  - this can be changed when your on your coruse code management, you can change your branches to build to another branch
+  - this can be changed when your on your course code management, you can change your branches to build to another branch
   - to create another branch you can use the command **git checkout -b <branch name>**
 7. Go to **build** and add a build step
 8. Execute shell
 9. In the commands section you want to enter the commands to run the tests
 
 ````
+cd app
 npm install
 npm test
 
